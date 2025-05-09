@@ -18,6 +18,8 @@ include "config.php"
     <link rel="stylesheet" href="assets/css/datatables.min.css">
     <!-- font awesome CSS -->
     <link rel="stylesheet" href="assets/css/all.css">
+    <!-- chosen CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-chosen.css">
 </head>
 
 <body>
@@ -102,6 +104,13 @@ include "config.php"
     <!-- font awesome js -->
     <script src="assets/js/all.js"></script>
 
+    <!-- chosen js -->
+    <script src="assets/js/chosen.jquery.min.js"></script>
+    <script>
+        $(function() {
+            $('.chosen').chosen();
+        });
+    </script>
 </body>
 
 </html>

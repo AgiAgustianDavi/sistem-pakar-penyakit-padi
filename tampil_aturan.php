@@ -13,7 +13,7 @@
             <tbody>
                 <?php
                 $no = 1;
-                $sql = "SELECT basis_aturan.id_aturan, basis_aturan.id_keputusan, keputusan.nama_keputusan FROM basis_aturan INNER JOIN keputusan WHERE basis_aturan.id_keputusan=keputusan.id_keputusan ORDER BY nama_keputusan ASC";
+                $sql = "SELECT basis_aturan.id_aturan, basis_aturan.id_keputusan, keputusan.nama_keputusan FROM basis_aturan INNER JOIN keputusan ON basis_aturan.id_keputusan=keputusan.id_keputusan ORDER BY nama_keputusan ASC";
                 $result = $conn->query($sql);
                 while ($row = $result->fetch_assoc()) {
                 ?>
