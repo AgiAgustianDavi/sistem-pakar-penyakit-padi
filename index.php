@@ -31,10 +31,10 @@ include "config.php"
                 <a class="nav-link" href="?page=gejala">Gejala</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Diagnosa</a>
+                <a class="nav-link" href="?page=keputusan">Keputusan</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link " href="#">Basis Aturan</a>
+                <a class="nav-link " href="?page=aturan">Basis Aturan</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link " href="#">Logout</a>
@@ -60,7 +60,27 @@ include "config.php"
             } elseif ($action == "update") {
                 include "update_gejala.php";
             } else {
-                include "NAMA_HALAMAN";
+                include "hapus_gejala.php";
+            }
+        } elseif ($page == "keputusan") {
+            if ($action == "") {
+                include "tampil_keputusan.php";
+            } elseif ($action == "tambah") {
+                include "tambah_keputusan.php";
+            } elseif ($action == "update") {
+                include "update_keputusan.php";
+            } else {
+                include "hapus_keputusan.php";
+            }
+        } elseif ($page == "aturan") {
+            if ($action == "") {
+                include "tampil_aturan.php";
+            } elseif ($action == "tambah") {
+                include "tambah_aturan.php";
+            } elseif ($action == "update") {
+                include "update_aturan.php";
+            } else {
+                include "hapus_aturan.php";
             }
         } else {
             include "NAMA_HALAMAN";
